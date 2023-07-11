@@ -13,30 +13,31 @@ const NavPage = ({ setter }) => {
                 setImg_index(0)
             }
             else {
-                console.log(img_index);
+                console.log("Hello");
                 setImg_index(img_index + 1)
             }
-        }, 1000);
+        }, 1500);
     }, [])
     return (
         <div className='nav-container'>
-            <div className='nav-header'>
-                <img src={hawk_logo} className='logo-img' />
-                <svg
-                    onClick={() => {
-                        setter(false)
-                    }}
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={.8} stroke="currentColor" className="nav-close">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
 
-            </div>
 
             <div className='flex justify-evenly h-screen'>
-                <div className='w-full h-screen'>
-                    <img src={NAV_PAGE_IMAGES[0]} className='object-fill'/>
+                <div className='hidden w-full h-screen md:block'>
+                    <img src={NAV_PAGE_IMAGES[img_index]} className='object-fill' />
                 </div>
-                <div className='w-full'>
+                <div className='w-full relative'>
+                    <div className='nav-header'>
+                        <img src={hawk_logo} className='logo-img' />
+                        <svg
+                            onClick={() => {
+                                setter(false)
+                            }}
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={.8} stroke="currentColor" className="nav-close">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+
+                    </div>
                     <ul className='nav-link-container'>
                         {NAV_ITEM_LIST.map(el => {
                             return <li className='nav-link'>{el.name}</li>
