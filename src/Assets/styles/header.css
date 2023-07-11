@@ -28,5 +28,5 @@
 }
 
 .nav-link {
-    @apply uppercase font-bold text-[1.5rem]
+    @apply uppercase font-bold text-[1.5rem] hover:cursor-pointer hover:scale-125 hover:text-yellow-2
 }
