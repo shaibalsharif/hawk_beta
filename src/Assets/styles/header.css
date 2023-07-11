@@ -1,0 +1,32 @@
+.header-container {
+    @apply w-full z-10 h-20 flex px-4 py-4 justify-between items-center absolute top-0 left-0
+}
+
+.logo-img {
+    @apply h-full
+}
+
+.menu-icon {
+    @apply text-3xl
+}
+
+.nav-container {
+    @apply z-20 absolute h-screen w-full top-0 left-0 overflow-hidden bg-dark-1
+}
+
+.nav-header {
+    @apply h-20 flex px-4 py-4 justify-between w-full items-center absolute top-0 left-0
+}
+
+.nav-close,
+.nav-open {
+    @apply w-16 h-16 hover:cursor-pointer
+}
+
+.nav-link-container { 
+    @apply h-screen w-full flex flex-col items-center justify-center 
+}
+
+.nav-link {
+    @apply uppercase font-bold text-[1.5rem]
+}
