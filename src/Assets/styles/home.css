@@ -1,0 +1,39 @@
+.home-constainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-back {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    @apply scale-[800%] md:scale-[200%]
+}
+
+.title {
+    @apply uppercase font-bold text-white w-6 absolute left-2 md:left-8 top-[50%]
+    transform -translate-y-[50%] text-3xl
+}
+
+.video-counter {
+    @apply absolute right-2 md:right-8 top-1/2 text-yellow-2 transform -translate-y-1/2 text-xl 
+}
+
+.video-category {
+    @apply  absolute left-4 md:left-10 bottom-6 text-xs tracking-widest
+}
+
+.video-change-panel {
+    @apply absolute bottom-6 right-6 flex gap-2 
+} 
+.change-button{
+    @apply h-6 w-6  hover:cursor-pointer hover:text-yellow-2
+}
+
