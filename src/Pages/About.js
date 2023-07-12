@@ -8,9 +8,9 @@ import Footer from '../Components/Shared/Footer';
 
 const About = () => {
   return (
-    <div className='bg-dark-1'>
+    <div className=''>
 
-      <div className='sm:flex items-center sm:bg-dark-2 relative '>
+      <div className='sm:flex items-center z-20 sm:bg-dark-2 relative '>
         <img src={car1} className='object-cover w-full h-screen absolute top-0 left-0 sm:relative -z-10 sm:z-0 sm:w-full ' />
 
         <div className=' h-screen px-8  sm:w-full  flex items-center bg-black bg-opacity-25 '>
