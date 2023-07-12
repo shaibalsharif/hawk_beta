@@ -6,7 +6,7 @@ import NavPage from '../../Pages/NavPage'
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   return (
-    <div className='header-container'>
+    <div className='header-container z-40'>
 
       <img src={hawk_logo} alt='logo' className='logo-img' />
       <svg
