@@ -1,0 +1,8 @@
+.about-container{
+    @apply h-full w-screen
+}
+
+.about-title-container{
+@apply  flex items-center justify-center 
+}
+

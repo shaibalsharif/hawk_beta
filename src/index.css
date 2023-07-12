@@ -13,3 +13,9 @@ body,
     font-family: "Oswald", sans-serif;
     @apply text-white
 }
+
+
+::selection {
+  background: inherit;
+  color: yellow;
+}

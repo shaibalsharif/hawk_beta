@@ -1,5 +1,5 @@
 .header-container {
-    @apply w-full z-10 h-20 flex px-4 py-4 justify-between items-center absolute top-0 left-0
+    @apply w-full z-10 h-20 flex px-4 py-4 justify-between items-center fixed top-0 left-0
 }
 
 .logo-img {
@@ -20,7 +20,7 @@
 
 .nav-close,
 .nav-open {
-    @apply w-16 h-16 hover:cursor-pointer
+    @apply w-16 h-16 
 }
 
 .nav-link-container { 
