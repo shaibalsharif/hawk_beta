@@ -8,7 +8,7 @@ import Footer from '../Components/Shared/Footer';
 
 const About = () => {
   return (
-    <div className=''>
+    <div className='bg-dark-1'>
 
       <div className='sm:flex items-center sm:bg-dark-2 relative '>
         <img src={car1} className='object-cover w-full h-screen absolute top-0 left-0 sm:relative -z-10 sm:z-0 sm:w-full ' />
