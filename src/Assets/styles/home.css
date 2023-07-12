@@ -34,6 +34,6 @@
     @apply absolute bottom-6 right-6 flex gap-2 
 } 
 .change-button{
-    @apply h-6 w-6  hover:cursor-pointer hover:text-yellow-2
+    @apply h-6 w-6   hover:text-yellow-2
 }
 

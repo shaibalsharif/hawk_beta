@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import hawk_logo from '../Assets/images/logo.png'
 import { NAV_ITEM_LIST, NAV_PAGE_IMAGES } from '../Assets/data'
+import { useNavigate } from 'react-router-dom'
 
 
 const NavPage = ({ setter }) => {
     const [img_index, setImg_index] = useState(0)
-
+    const navigate = useNavigate()
 
     useEffect(() => {
-        setInterval(() => {
+        setTimeout(() => {
             if (img_index === NAV_PAGE_IMAGES.length - 1) {
                 setImg_index(0)
             }
             else {
-                console.log("Hello");
+               
                 setImg_index(img_index + 1)
             }
         }, 1500);
     }, [])
+
+
+    const handleNavClick = (e) => {
+
+        if (e.target.innerHTML === 'home') {
+            navigate('/')
+           
+        } else {
+            navigate(`/${e.target.innerHTML}`)
+        }
+        setter(false)
+
+    }
     return (
         <div className='nav-container'>
 
@@ -40,7 +54,7 @@ const NavPage = ({ setter }) => {
                     </div>
                     <ul className='nav-link-container'>
                         {NAV_ITEM_LIST.map(el => {
-                            return <li className='nav-link'>{el.name}</li>
+                            return <li value={el.name} className='nav-link' onClick={handleNavClick}>{el.name}</li>
                         })}
 
                     </ul>
