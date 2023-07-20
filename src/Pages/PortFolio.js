@@ -1,8 +1,13 @@
 import React from 'react'
+import Footer from '../Components/Shared/Footer'
+import Cover from '../Components/About/Cover'
 
 const PortFolio = () => {
   return (
-    <div>PortFolio</div>
+    <div>
+      <Cover />
+      <Footer />
+    </div>
   )
 }
 
