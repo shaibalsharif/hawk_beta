@@ -3,6 +3,7 @@ import About from "../Pages/About";
 import PortFolio from "../Pages/PortFolio";
 import Services from "../Pages/Services";
 import Contact from "../Pages/Contact";
+import PortfolioDetails from "../Pages/PortfolioDetails";
 
 const createRoute = (path, Element) => {
     return { path: path, element: Element }
@@ -16,4 +17,5 @@ export const routes = [
     createRoute('/services', <Services />),
     createRoute('/portfolio', <PortFolio />),
     createRoute('/contact', <Contact />),
+    createRoute('/portfolio/*', <PortfolioDetails />),
 ]; 
