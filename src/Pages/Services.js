@@ -12,10 +12,7 @@ const Services = () => {
             <Cover />
             <OurWork />
             <ServiceList />
-
-
             <ClientHub />
-
             <Footer />
         </div>
     )

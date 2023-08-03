@@ -1,0 +1,6 @@
+
+  div[style*='overflow-x: scroll']::-webkit-scrollbar {
+    /* WebKit-based browsers */
+    width: 0;
+    height: 0;
+  }
