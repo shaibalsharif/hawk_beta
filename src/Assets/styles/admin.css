@@ -1,0 +1,270 @@
+/* Add responsive styling for smaller screens */
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    @apply pt-28
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .selected {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Add media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .tabs {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding: 10px 0;
+      margin-bottom: 0;
+    }
+  
+    .tab {
+      margin: 5px;
+    }
+  }
+
+
+  /* HOME FORM CSS */
+  .home-form {
+    margin: 20px;
+    @apply
+    w-1/4 border-2 border-yellow-2 p-8
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 5px;
+    background-color: gray;
+    color: white;
+    border: 1px solid transparent;
+    outline: none;
+
+  }
+  .btn-input{
+    @apply pr-12
+  }
+  
+  .input-field.error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .items-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    background-color: red;
+  }
+  
+  .titlei {
+    flex: 1;
+    color: white;
+  }
+  
+  .order,
+  .delete,
+  .add {
+    cursor: pointer;
+    margin: 0 5px;
+    color: white;
+  }
+  
+  .add {
+    background-color: lightgray;
+    padding: 5px;
+  }
+  
+  /* ABOU FORM */
+  .about-form {
+    padding: 20px;
+  }
+  
+  .section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    font-size: 12px;
+    color: #999;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform-origin: left top;
+    transform: translateY(0) scale(1);
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .input-group input:focus + label,
+  .input-group input:not(:placeholder-shown) + label {
+    transform: translateY(-25px) scale(0.8);
+    color: #007bff;
+  }
+  
+  .bullet-list input {
+    width: 100%;
+    padding: 10px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .cover-image input[type='file'] {
+
+  }
+  
+  .cover-image label {
+    display: block;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  .show-members-button,
+.add-member-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.show-members-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.add-member-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.show-members-button.active,
+.add-member-button.active {
+  background-color: #fdd835;
+  color: #333;
+}
+
+.team-member-card {
+  /* Styles for the member carousel (you can add your carousel styles here) */
+}
+
+.add-member {
+  margin-top: 1rem;
+}
+
+.add-member input[type='text'],
+.add-member input[type='file'] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.add-member input[type='text']::placeholder {
+  color: #666;
+}
+
+.add-member input[type='text']:focus {
+  border-color: #fdd835;
+}
+
+.add-member button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-member button:hover {
+  background-color: #1976d2;
+}
+
+.services-form {
+  padding: 2rem;
+  background-color: #222;
+  color: white;
+}
+

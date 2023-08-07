@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const SinglePortfolio = ({ item }) => {
@@ -6,6 +6,13 @@ const SinglePortfolio = ({ item }) => {
   const handlePortfolio = (e) => {
     navigate('/portfolio/' + item.id)
   }
+
+
+  
+
+
+
+
   return (
     <div
 

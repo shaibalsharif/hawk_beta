@@ -14,7 +14,7 @@ const NavPage = ({ setter }) => {
                 setImg_index(0)
             }
             else {
-               
+
                 setImg_index(img_index + 1)
             }
         }, 1500);
@@ -25,7 +25,7 @@ const NavPage = ({ setter }) => {
 
         if (e.target.innerHTML === 'home') {
             navigate('/')
-           
+
         } else {
             navigate(`/${e.target.innerHTML}`)
         }
@@ -56,7 +56,7 @@ const NavPage = ({ setter }) => {
                         {NAV_ITEM_LIST.map(el => {
                             return <li value={el.name} className='nav-link' onClick={handleNavClick}>{el.name}</li>
                         })}
-
+                        <li value={'Admin'} className='nav-link' onClick={handleNavClick}>{'Admin'}</li>
                     </ul>
                 </div>
 
