@@ -4,7 +4,6 @@ import Cover from '../Components/About/Cover'
 import { PORTFOLIO_LIST } from '../Assets/data'
 import SinglePortfolio from '../Components/Portfolio/SinglePortfolio'
 import '../Assets/styles/portfolio.css'
-import SingleCategory from '../Components/Portfolio/SingleCategory'
 
 
 const PortFolio = () => {
@@ -58,7 +57,7 @@ const PortFolio = () => {
       <div className='flex ' ref={listRef} id='trying'>
        {/*  {PORTFOLIO_LIST.map(item => <SinglePortfolio key={'port-' + item?.id} item={item} />
         )} */}
-        {PORTFOLIO_LIST.map(category=><SingleCategory category={category}/>)}
+        {PORTFOLIO_LIST.map(categoty=>console.log(categoty))}
 
       </div>
 
