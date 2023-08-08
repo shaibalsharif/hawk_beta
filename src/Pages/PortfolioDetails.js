@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Cover from '../Components/Portfolio/Cover'
-import { useHref } from 'react-router-dom'
+import { useHref, useParams } from 'react-router-dom'
 import { PORTFOLIO_LIST } from '../Assets/data'
 import NestedPage from '../Components/Portfolio/NestedPage'
 import Footer from '../Components/Shared/Footer'
@@ -8,11 +8,10 @@ import NestedPage1 from '../Components/Portfolio/NestedPage1'
 import NestedPage2 from '../Components/Portfolio/NestedPage2'
 const PortfolioDetails = () => {
 
-    const id = useHref().split('/')[2]
-    const portfolioItem = PORTFOLIO_LIST.filter(item => item.id == id)[0]
-
-    console.log(portfolioItem);
-
+    const id = useParams().id
+    const category = useParams().category
+    const item = PORTFOLIO_LIST.filter(item => item.category_name.toLowerCase() == category)[0]
+    const portfolioItem = item.content.filter(el => id == el.id)[0]
 
     return (
         <div>
@@ -42,7 +41,7 @@ const PortfolioDetails = () => {
 
                 return !item.type ? (<NestedPage item={item} />)
                     : item.type === 'cover' ? (<NestedPage1 item={item} />) :
-                        item.type === 'single' ? (<NestedPage2 item={item}/>) : <></>
+                        item.type === 'single' ? (<NestedPage2 item={item} />) : <></>
             }
 
             )}

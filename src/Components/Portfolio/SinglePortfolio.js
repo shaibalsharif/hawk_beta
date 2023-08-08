@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const SinglePortfolio = ({ item }) => {
   const navigate = useNavigate()
+  const category= useParams().category
+  console.log(category);
+  
   const handlePortfolio = (e) => {
-    navigate('/portfolio/' + item.id)
+    
+    navigate('/portfolio/' + category+'/'+item.id)
   }
 
 

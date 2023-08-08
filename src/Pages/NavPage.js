@@ -56,7 +56,7 @@ const NavPage = ({ setter }) => {
                         {NAV_ITEM_LIST.map(el => {
                             return <li value={el.name} className='nav-link' onClick={handleNavClick}>{el.name}</li>
                         })}
-                        <li value={'Admin'} className='nav-link' onClick={handleNavClick}>{'Admin'}</li>
+                        <li value={'admin'} className='nav-link' onClick={handleNavClick}>{'Admin'}</li>
                     </ul>
                 </div>
 
