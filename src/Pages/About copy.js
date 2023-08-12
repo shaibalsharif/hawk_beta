@@ -1,21 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Footer from '../Components/Shared/Footer';
 import Cover from '../Components/About/Cover';
 import TeamMembers from '../Components/About/TeamMembers';
 import WikiSection from '../Components/About/WikiSection';
 
 const About = () => {
-
-  useEffect(() => {
-
-  }, [])
-
   return (
     <div className=''>
       <Cover />
-
-      {/*   <img src=' https://drive.google.com/uc?export=view&id=1qXV9UYCd8tghDhSM4IC27LQGYrEM9DgO'/> */}
-      {/*    <img src='https://drive.google.com/file/d/1qXV9UYCd8tghDhSM4IC27LQGYrEM9DgO/view'/> */}
       <div className='h-[90vh] min-h-[480px] w-full bg-dark-1 flex flex-col md:flex-row items-start justify-center md:items-center md:justify-between
         px-4 md:px-8 text-justify '>
         <h2 className=' text-yellow-2 text-[23px] md:text-[30px] tracking-[2px] font-[500] uppercase md:text-end'>who we are</h2>
