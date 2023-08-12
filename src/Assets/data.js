@@ -45,7 +45,8 @@ export const PORTFOLIO_LIST = [
 
 
     {
-        id: 1, category_name: "photography", category_details: "Photography Photography Photography", photo: portfolio4, content: [
+        id: 1, category_name: "photography", category_details: "Photography Photography Photography", photo: portfolio4,
+        content: [
             {
                 id: 1, category: 'commercial', sub: 'bushwick selfies pork belly lyft brooklyn messeng',
                 background: portfolio1, content: {
@@ -56,39 +57,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: [nest11, nest12, nest13],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: [nest11, nest12, nest13, nest14],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: [single1],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover2,],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -110,39 +79,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -164,39 +101,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -219,39 +124,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -266,7 +139,8 @@ export const PORTFOLIO_LIST = [
     },
     {
 
-        id: 2, category_name: "cinematography", category_details: "cinematograpgy cinematograpgy cinematograpgy", photo: portfolio3, content: [
+        id: 2, category_name: "cinematography", category_details: "cinematograpgy cinematograpgy cinematograpgy", photo: portfolio3,
+         content: [
             {
                 id: 1, category: 'commercial', sub: 'bushwick selfies pork belly lyft brooklyn messeng',
                 background: portfolio1, content: {
@@ -277,39 +151,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: [nest11, nest12, nest13],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: [nest11, nest12, nest13, nest14],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: [single1],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover2,],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -331,39 +173,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -385,39 +195,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -440,39 +218,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -497,39 +243,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: [nest11, nest12, nest13],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: [nest11, nest12, nest13, nest14],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: [single1],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover2,],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -551,39 +265,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -605,39 +287,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -660,39 +310,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -718,39 +336,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: [nest11, nest12, nest13],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: [nest11, nest12, nest13, nest14],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: [single1],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover2,],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -772,39 +358,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: [cover1],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -826,39 +380,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer
@@ -881,39 +403,7 @@ export const PORTFOLIO_LIST = [
                     Austin fam chia cold-pressed raw denim. Glossier drinking vinegar portland lo-fi, polaroid bespoke lomo. Banjo art party XOXO, fashion
                      axe sustainable retro ethical gentrify. Occupy listicle hoodie viral, cred health goth farm-to-table pork belly slow-carb echo
                       park shaman banjo. Next level brooklyn mumblecore keytar stumptown.`,
-                    nestings: [
-                        {
-                            title: 'Craft Beer Single bicycle rights',
-                            description: `Retro jean shorts cronut lumbersexual mixtape hella you probably haven't heard of them austin williamsburg af
-                     mustache pinterest. Mixtape kinfolk cray, wolf palo santo brunch iPhone. 3 wolf moon microdosing scenester, tilde roof party 
-                     affogato typewriter celiac echo park craft beer bicycle rights man braid trust fund four dollar toast gentrify. IPhone humblebrag
-                      kale chips hell of. Brooklyn whatever chia deep v slow-carb lomo put a bird on.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'horizontal'
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        }, {
-                            title: 'UNICORN SHOREDITCH PITCHFORK SQUID',
-                            description: `Thundercats single-origin coffee jianbing hoodie health goth keytar la croix skateboard retro art party
-                             paleo kogi adaptogen. Crucifix cliche marfa wayfarers squid. Portland YOLO squid butcher thundercats flannel forage 
-                             pitchfork ramps before they sold out 8-bit chia. Palo santo ramps YOLO, microdosing normcore lumbersexual aesthetic 
-                             salvia flannel mustache next level hot chicken migas. Edison bulb before they sold out occupy, fam photo booth.`,
-                            photos: ['item1', 'item2', 'item2'],
-                            orientation: 'vertical'
-                        }, {
-                            type: 'single',
-                            title: `QUINOA CHIA BEFORE PROBABLY HAVEN'T`,
-                            description: `Drinking vinegar mixtape church-key letterpress, poke activated charcoal quinoa la croix fam 
-                            flexitarian ethical ugh kombucha whatever. Roof party listicle swag direct trade, chambray microdosing prism crucifix 
-                            tattooed DIY keffiyeh. Tofu tumeric meditation hashtag, waistcoat art party forage neutra. Williamsburg kinfolk 
-                            slow-carb retro pitchfork. Pop-up bitters taiyaki cornhole readymade leggings gochujang. Hexagon hell of craft beer glossier.`,
-                            photos: ['item1', 'item2', 'item2'],
-
-                        }, {
-                            type: 'cover',
-                            photos: ['item1',],
-                        },],
+                    nestings: [nest11, nest12, nest13, nest14, cover1, cover2, single1],
                     creatorsection: {
                         name: 'BALANCHAEV BALANCHA', position: 'CREATIVE DIRECTOR', company: 'XOXO PRODUCTION LTD',
                         description: `Synth keytar distillery offal man braid sartorial 90's blue bottle fanny pack kale chips craft beer

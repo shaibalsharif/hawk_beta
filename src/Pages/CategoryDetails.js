@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { PORTFOLIO_LIST } from '../Assets/data'
 import SinglePortfolio from '../Components/Portfolio/SinglePortfolio'
 import '../Assets/styles/portfolio.css'
 import { useParams } from 'react-router-dom'
+import { fetchDocumentByName, getDocumentByRef, getDocumentByRefList } from '../Firebase/firebase_utils'
 
 
 
@@ -11,7 +12,43 @@ const CategoryDetails = () => {
 
     const listRef = useRef();
     const category = useParams().category
+
+
+    const [portfolio_item_list, setPortfolio_item_list] = useState([])
+
+    useEffect(() => {
+        fetchDocumentByName('portfolio_category', category, setPortfolio_item_list)
+    }, [])
+
    
+
+    /*     useEffect(() => {
+            fetchDocumentByName('portfolio_category', category, (data) => { setPortfolio_ref_list(data.content) })
+        }, [])
+    
+    
+        useEffect(() => {
+            portfolio_ref_list.map(portfolio_ref => {
+                getDocumentByRef(portfolio_ref, (data) => { setPortfolio_item_list([...portfolio_item_list, data]) })
+            })
+        }, [portfolio_ref_list])
+    
+    
+    
+        useEffect(() => {
+            console.log(portfolio_item_list);
+        }, [portfolio_item_list])
+    
+     */
+
+
+
+
+
+
+
+
+
     useEffect(() => {
         const listContainer = listRef.current;
 
@@ -48,16 +85,14 @@ const CategoryDetails = () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
-    useEffect(() => {
-        console.log(PORTFOLIO_LIST.filter(el => el.category_name.toLowerCase() === category))
-    }, [])
+
 
 
 
     return (
         <div style={{ overflowX: 'scroll', }}>
             <div className='flex ' ref={listRef} id='trying'>
-                {PORTFOLIO_LIST.filter(el => el.category_name.toLowerCase() === category)[0]?.content.map(item => <SinglePortfolio key={'port-' + item?.id} item={item} />
+                {portfolio_item_list?.map(item => <SinglePortfolio key={'port-' + item?.title} item={item} />
                 )}
 
 

@@ -27,7 +27,7 @@ const Admin = () => {
   return (
     <div className='admin-page bg-black min-h-screen w-full'>
       <div className='tabs'>
-        {NAV_ITEM_LIST.map((el,index) => <Tab
+        {NAV_ITEM_LIST.map((el, index) => <Tab
           key={el.name}
           label={el.name}
           isSelected={selectedTab === index}
@@ -35,13 +35,15 @@ const Admin = () => {
         />)}
       </div>
 
+      <div className='w-full '>
+        {selectedTab === 0 && <HomeForm />}
+        {selectedTab === 1 && <AboutForm />}
+        {selectedTab === 2 && <ServicesForm />}
 
-      {selectedTab === 0 && <HomeForm />}
-      {selectedTab === 1 && <AboutForm />}
-      {selectedTab === 2 && <ServicesForm />}
-      
-      {selectedTab === 3 && <PortfolioForm />}
-      {selectedTab === 4 && <ContactForm />}
+        {selectedTab === 3 && <PortfolioForm />}
+        {selectedTab === 4 && <ContactForm />}
+      </div>
+
 
 
 
