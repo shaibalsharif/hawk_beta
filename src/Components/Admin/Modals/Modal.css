@@ -1,0 +1,116 @@
+/* CategoryModal.css */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply
+    bg-black bg-opacity-70
+}
+
+.modal-content {
+
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    @apply
+    bg-dark-2
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    margin-top: 10px;
+    @apply
+    font-[500]
+}
+
+input,
+select,
+button {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    @apply
+    bg-dark-3
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjustments for select dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 18px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.confirmation-modal {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-button,
+.cancel-button {
+    margin-top: 5px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.confirm-button:hover {
+    background-color: #c82333;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cancel-button:hover {
+    background-color: #aaa;
+}

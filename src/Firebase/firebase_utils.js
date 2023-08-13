@@ -73,7 +73,7 @@ export const fetchPortFolioData = async (collectionName, documentName, setter) =
         const documentSnapshot = await getDoc(documentRef);
         if (documentSnapshot.exists()) {
             const documentData = documentSnapshot.data();
-            
+
             setter(documentData);
 
 
@@ -110,9 +110,14 @@ export const fetchDocumentByName = async (collectionName, documentName, setter) 
 
 export const getEmbedLink = (url) => {
     if (url) {
-        const found = url.match(/d\/([A-Za-z0-9\-]+)/);
-        const new_url = 'https://drive.google.com/uc?export=view&id=' + found[1];
+        const found = url.split('/d/')[1]?.split('/')[0]
+        if (!found) {
+            return null
+        }
+        const new_url = 'https://drive.google.com/uc?export=view&id=' + found;
         return new_url
+        
+
     }
 }
 
