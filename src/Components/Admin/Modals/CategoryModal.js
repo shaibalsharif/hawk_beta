@@ -20,6 +20,9 @@ const CategoryModal = ({ onClose, data }) => {
             setPhotoURL(data.data.photo.url)
         }
     }, [data]);
+
+
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!data) {
