@@ -4,7 +4,7 @@ import { useHref, useParams } from 'react-router-dom'
 import { PORTFOLIO_LIST } from '../Assets/data'
 import NestedPage from '../Components/Portfolio/NestedPage'
 import Footer from '../Components/Shared/Footer'
-import { fetchPortFolioData, getEmbedLink } from '../Firebase/firebase_utils'
+import { fetchPortFolioData, getPhotoUrl } from '../Firebase/firebase_utils'
 const PortfolioDetails = () => {
 
     const id = useParams().id
@@ -29,14 +29,14 @@ const PortfolioDetails = () => {
         <div>
             {data ? (<div>
                 <Cover
-                    image={getEmbedLink(data.cover_background.type=='g-drive'?data.cover_background.url:"")}
+                    image={getPhotoUrl(data.cover_background.type, data.cover_background.url)}
                     title={data.cover_title}
                     client={data.client}
                     year={data.year}
                     role={data.role}
                 />
 
-                <div className='h-screen items-start
+                <div className='min-h-screen items-start pb-16
              md:px-[20%] 
             bg-dark-1 pl-8 '>
                     <div className='pt-96 flex flex-col justify-center gap-16 md:flex-row md:items-start '>
@@ -51,7 +51,7 @@ const PortfolioDetails = () => {
 
                 </div>
                 <div className='w-full bg-white  min-h-screen space-y-4 pt-10 pb-8'>
-                    {data.content_list.map(item => (<NestedPage item={getEmbedLink(item.type=='g-drive'?item.url:"")} />))}
+                    {data.content_list.map(item => (<NestedPage item={getPhotoUrl(item.type, item.url)} />))}
                 </div>
 
                 <div className='min-h-screen w-full bg-dark-1  flex justify-center items-center'>

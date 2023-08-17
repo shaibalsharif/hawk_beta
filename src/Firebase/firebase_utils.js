@@ -68,12 +68,13 @@ export const getCategoryList = async (setter) => {
 
 }
 export const fetchPortFolioData = async (collectionName, documentName, setter) => {
+     console.log(collectionName, documentName, setter);
     const documentRef = doc(db, collectionName, documentName);
     try {
         const documentSnapshot = await getDoc(documentRef);
         if (documentSnapshot.exists()) {
             const documentData = documentSnapshot.data();
-
+          console.log("setting",documentData);
             setter(documentData);
 
 
@@ -108,15 +109,21 @@ export const fetchDocumentByName = async (collectionName, documentName, setter) 
     }
 }
 
-export const getEmbedLink = (url) => {
+export const getPhotoUrl = (type, url,) => {
     if (url) {
-        const found = url.split('/d/')[1]?.split('/')[0]
-        if (!found) {
-            return null
+        switch (type) {
+            case 'g-drive':
+                const found = url.split('/d/')[1]?.split('/')[0]
+                if (!found) {
+                    return url
+                }
+                const new_url = 'https://drive.google.com/uc?export=view&id=' + found;
+                return new_url
+            case 'g-drive-video':
+                return
+            default:
+                return url
         }
-        const new_url = 'https://drive.google.com/uc?export=view&id=' + found;
-        return new_url
-        
 
     }
 }
