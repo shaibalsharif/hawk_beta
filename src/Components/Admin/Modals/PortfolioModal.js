@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
-import { getEmbedLink } from '../../../Firebase/firebase_utils';
+import React, { useEffect, useState } from 'react';
+import { fetchPortFolioData, getPhotoUrl } from '../../../Firebase/firebase_utils';
 import { addDoc, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../../../Firebase/firebase_config';
 
 
-const PortfolioModal = ({ data, onClose, category }) => {
+const PortfolioModal = ({ data=null, onClose, category, actionType }) => {
+
+
+    useEffect(() => {
+        if (actionType && actionType.type == 'edit' && !data) {
+            fetchPortFolioData('portfolio', actionType.id, (val)=>data=val)
+        }
+    }, [])
 
     const [currentTab, selectCurrentTab] = useState('portfolio-details')
 
@@ -33,11 +40,11 @@ const PortfolioModal = ({ data, onClose, category }) => {
     const [newImageType, setNewImageType] = useState(null)
     const [newImageUrl, setNewImageUrl] = useState('')
 
-   
-   
-   
+
+
+
     const addPortfolioToCategory = async (newDocumentRef,) => {
-       
+
         try {
             // Step 1: Retrieve the document you want to update
 
@@ -59,17 +66,19 @@ const PortfolioModal = ({ data, onClose, category }) => {
             console.error('Error adding data to document array:', error);
         }
     };
-   
-    const addToPortfolioList = async (newDocumentRef ) => {
+
+    const addToPortfolioList = async (newDocumentRef) => {
         const data = {
             title: thumbTitle,
             details: thumbDetails,
             photo: {
                 type: thumbType,
-                url: thumbPhoto
+                url: thumbPhoto?.url
             },
             content: newDocumentRef
         }
+
+        console.log(data);
         try {
             // Step 1: Retrieve the document you want to update
 
@@ -78,7 +87,7 @@ const PortfolioModal = ({ data, onClose, category }) => {
 
             let returned = ''
             if (docSnapshot.exists()) {
-                
+
 
                 // Step 3: Update the document in Firestore
                 returned = await updateDoc(docRef, data);
@@ -93,12 +102,6 @@ const PortfolioModal = ({ data, onClose, category }) => {
             console.error('Error adding data to document array:', error);
         }
     };
-
-
-
-
-
-
 
 
     const handleAddImage = (e) => {
@@ -124,11 +127,10 @@ const PortfolioModal = ({ data, onClose, category }) => {
         e.preventDefault();
 
         const newData = {
-            cover_background: { type: coverType, url: coverPhoto.url },
+            cover_background: { type: coverType, url: coverPhoto?.url },
             client: client,
             content_description: contentDescription,
             cover_title: coverTitle,
-
             role: role,
             year: year,
             points: points,
@@ -138,8 +140,8 @@ const PortfolioModal = ({ data, onClose, category }) => {
             creator_section_position: creatorSectionPosition,
             content_list: content_list
         };
-        console.log(newData);
-        if (newData) {
+       ;
+         if (newData) {
             try {
                 // Check if the document ID already exists
                 const docRef = doc(db, 'portfolio', doc_id); // Replace 'customId' with your desired document ID
@@ -153,15 +155,13 @@ const PortfolioModal = ({ data, onClose, category }) => {
 
                 await setDoc(docRef, newData);
 
-                addToPortfolioList(docRef, )
-          
-
+                addToPortfolioList(docRef,)
                 // Close the modal
                 // onClose();
             } catch (error) {
                 console.error('Error adding document:', error);
             }
-        }
+        } 
 
         // onClose();
     };
@@ -264,7 +264,7 @@ const PortfolioModal = ({ data, onClose, category }) => {
                             <div className="p-4 border">
 
                                 <img
-                                    src={coverType === 'g-drive' ? getEmbedLink(coverPhoto?.url) : coverPhoto?.url}
+                                    src={getPhotoUrl(coverType, coverPhoto?.url)}
                                     title={coverType === 'g-drive' ? "Google Drive Embed" : "Image Link"}
                                     className="w-full h-[300px]"
                                 />
@@ -299,7 +299,7 @@ const PortfolioModal = ({ data, onClose, category }) => {
                             <div className="p-4 border">
 
                                 <img
-                                    src={thumbType === 'g-drive' ? getEmbedLink(thumbPhoto?.url) : thumbPhoto?.url}
+                                    src={getPhotoUrl(thumbType, thumbPhoto?.url)}
                                     title={thumbType === 'g-drive' ? "Google Drive Embed" : "Image Link"}
                                     className="w-full h-[300px]"
                                 />
@@ -454,19 +454,14 @@ const PortfolioModal = ({ data, onClose, category }) => {
 
                                 {content_list.map((item, index) => (
                                     <div key={index} className='relative border p-2  space-x-2 flex items-center'>
-                                        {item.type === 'g-drive' ? (
-                                            <img
-                                                src={getEmbedLink(item.url)}
-                                                alt={`Image ${index}`}
-                                                className='w-20 h-auto'
-                                            />
-                                        ) : (
-                                            <img
-                                                src={item.url}
-                                                alt={`Image ${index}`}
-                                                className='w-20 h-auto'
-                                            />
-                                        )}
+
+                                        <img
+                                            src={getPhotoUrl(item.type, item.url)}
+                                            alt={`Image ${index}`}
+                                            className='w-20 h-auto'
+                                        />
+
+
                                         <button
                                             type='button'
                                             onClick={() => handleDeleteImage(index)}
@@ -506,7 +501,7 @@ const PortfolioModal = ({ data, onClose, category }) => {
                             </div>
                             {newImageUrl && newImageType ? (<div className='border px-1 text-center'>
                                 <p>Preview</p>
-                                <img className='px-2 pb-2 pt-1 h-72 mx-auto' src={newImageType == 'g-drive' ? getEmbedLink(newImageUrl) : newImageUrl} />
+                                <img className='px-2 pb-2 pt-1 h-72 mx-auto' src={getPhotoUrl(newImageType, newImageUrl)} />
                             </div>) : <></>}
 
                         </div>

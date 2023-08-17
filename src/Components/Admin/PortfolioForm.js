@@ -1,31 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import dummy from '../../Assets/images/mountain.jpg'
 import { getCategoryList } from '../../Firebase/firebase_admin_utils';
-import { fetchDocumentByName, fetchPortFolioData, getEmbedLink } from '../../Firebase/firebase_utils';
+import { fetchDocumentByName, fetchPortFolioData, getPhotoUrl } from '../../Firebase/firebase_utils';
 import CategoryModal from './Modals/CategoryModal';
 import DeleteModal from './Modals/DeleteModal';
 import PortfolioModal from './Modals/PortfolioModal';
 
-let DUMMY_PORTFOLIO_DATA = [
-  {
-    title: 'Project 1',
-    details: 'Project 1 Details Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    coverUrl: dummy,
-    category: 'Category 1',
-  },
-  {
-    title: 'Project 2',
-    details: 'Project 2 Details Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    coverUrl: dummy,
-    category: 'Category 2',
-  },
-  {
-    title: 'Project 3',
-    details: 'Project 3 Details Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    coverUrl: dummy,
-    category: 'Category 3',
-  },
-];
+
 
 const PortfolioForm = () => {
   const [showAll, setShowAll] = useState(true);
@@ -36,12 +17,15 @@ const PortfolioForm = () => {
     coverUrl: '',
     category: '',
   });
+  const [actionType, setActionType] = useState(null)
+
+
 
   const [selectedCategory, setSelectedCategory] = useState()
   const [categoryList, setCategoryList] = useState([])
   const [portfolioItems, setPortfolioItems] = useState([])
   const [selectedPortfolio, setSelectedPortfolio] = useState()
-  const [portfolioContent, setportfolioContent] = useState(null)
+  const [portfolioContent, setPortfolioContent] = useState(null)
 
 
   const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false)
@@ -50,10 +34,13 @@ const PortfolioForm = () => {
 
   const [cat_data, set_cat_data] = useState(null)
 
+  // 4-06-1-E11-0396
 
 
-
-
+  /* useEffect(() => {
+    console.log('setting');
+    console.log(portfolioContent);
+  }, [portfolioContent]) */
 
   const handleCategorySelection = (item) => {
     setSelectedCategory(item.id);
@@ -70,11 +57,9 @@ const PortfolioForm = () => {
 
   useEffect(() => {
     if (selectedPortfolio) {
-      fetchPortFolioData('portfolio', selectedPortfolio.content.id, setportfolioContent)
+      fetchPortFolioData('portfolio', selectedPortfolio.content.id, setPortfolioContent)
     }
-
   }, [selectedPortfolio])
-
 
 
 
@@ -108,7 +93,8 @@ const PortfolioForm = () => {
 
 
   const handleAddPortfolio = (e) => {
-    setportfolioContent([])
+    setActionType(null)
+    setPortfolioContent([])
     setIsPortfolioModalOpen(true)
   }
 
@@ -120,14 +106,16 @@ const PortfolioForm = () => {
 
   };
 
-  const handleEditPortfolio = (e ) => {
+  const handleEditPortfolio = (e) => {
     e.preventDefault()
-    e.stopPropagation()
+    setActionType('edit')
+      setIsPortfolioModalOpen(true)
+ 
 
-    setIsPortfolioModalOpen(true)
   };
 
   const handlePortfolioItemSelection = (item) => {
+
     setSelectedPortfolio(item)
   }
 
@@ -160,7 +148,7 @@ const PortfolioForm = () => {
                     <p>{item.data.title}</p>
                     <p className='text-xs pt-2'>Details</p>
                     <p>{item.data.details}</p>
-                    <img className='w-full md:w-1/3' src={item.data.photo.type == 'g-drive' ? getEmbedLink(item.data.photo.url) : item.data.photo.url} />
+                    <img className='w-full md:w-1/3' src={getPhotoUrl(item.data.photo.type, item.data.photo.url)} />
                   </div>
                   <div className=' absolute right-0 top-0 flex gap-2 p-2 bg-[#585858] bg-opacity-10 rounded-lg m-2'>
 
@@ -219,13 +207,13 @@ const PortfolioForm = () => {
                         <p>{item.title}</p>
                         <p className='text-xs pt-2'>Details</p>
                         <p>{item.details}</p>
-                        <img className='w-full md:w-1/3' src={item.photo.type == 'g-drive' ? getEmbedLink(item.photo.url) : item.photo.url} />
+                        <img className='w-full md:w-1/3' src={getPhotoUrl(item.photo.type, item.photo.url)} />
                       </div>
                       <div className=' absolute right-0 top-0 flex gap-2 p-2 bg-[#585858] bg-opacity-10 rounded-lg m-2'>
 
                         {/* EDIT */}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-                          onClick={(e) => {handleEditPortfolio(e)}}
+                          onClick={(e) => { handleEditPortfolio(e) }}
                           className=" hover:bg-dark-1 bg-opacity-20 hover:scale-105 cursor-pointer p-1 rounded-xl w-8 h-8">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                         </svg>
@@ -258,53 +246,7 @@ const PortfolioForm = () => {
 
             </div></> : <></>}
 
-          {/* portfolioContent ? <div className='w-full border p-2 mt-6   grid grid-cols-3'>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>client</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.client}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>content_description</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.content_description}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>cover_title</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.cover_title}</p>
-            </div>
 
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>points</p>
-              <ul className=' font-semibold text-yellow-2'>{portfolioContent.points?.map(el => <li className=' font-semibold text-yellow-2'>{el}</li>)}</ul>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>role</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.role}</p>
-            </div>
-
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>year</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.year}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>creator_section_company</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.creator_section_company}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>creator_section_description</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.creator_section_description}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>creator_section_name</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.creator_section_name}</p>
-            </div>
-            <div className=' border bg-gray-50 bg-opacity-70'>
-              <p>creator_section_position</p>
-              <p className=' font-semibold text-yellow-2'>{portfolioContent.creator_section_position}
-              </p>
-            </div>
-
-
-          </div> : <></> */}
 
         </div>
 
@@ -314,7 +256,8 @@ const PortfolioForm = () => {
 
       {/* Modalas */}
       {isCategoryModalOpen ? <CategoryModal data={cat_data} onClose={() => setIsCategoryModalOpen(false)} /> : <></>}
-      {isPortfolioModalOpen ? <PortfolioModal category={selectedCategory} data={portfolioContent} onClose={() => setIsPortfolioModalOpen(false)} /> : <></>}
+      {isPortfolioModalOpen ? <PortfolioModal category={selectedCategory}
+        actionType={{ type: actionType, id:selectedPortfolio?.content?.id }} data={portfolioContent} onClose={() => setIsPortfolioModalOpen(false)} /> : <></>}
       {isDeleteModalOpen ? <DeleteModal data={cat_data} onClose={() => setIsDeleteModalOpen(false)} /> : <></>}
 
     </div >
@@ -322,27 +265,3 @@ const PortfolioForm = () => {
 };
 
 export default PortfolioForm;
-/* {DUMMY_PORTFOLIO_DATA.map((item, index) => (
-                    <div
-                      className={` w-full col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 py-4 cursor-pointer ${activeIndex === 11 ? 'bg-gray-900' : 'bg-gray-800'
-                        }`}
-                      key={index}
-                      onClick={() => handleCardClick(index)}
-                    >
-                      <img src={item.coverUrl} alt={item.title} className='w-full h-48 object-cover mb-2 rounded' />
-                      <h3 className='text-white text-md font-medium'>{item.title}</h3>
-                      <p className='text-gray-300 text-sm mb-2'>{item.details}</p>
-                      <span className='text-gray-400 text-xs'>{item.category}</span>
-                      <button
-                        className='text-red-500 hover:text-red-700 focus:outline-none'
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDeleteItem(index);
-                        }}
-                      >
-                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' className='w-4 h-4'>
-                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
-                        </svg>
-                      </button>
-                    </div>
-                  ))} */

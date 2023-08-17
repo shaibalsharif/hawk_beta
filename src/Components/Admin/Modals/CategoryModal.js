@@ -3,7 +3,7 @@ import { setDoc, getDoc, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../../Firebase/firebase_config';
 import './Modal.css'
 
-import { getEmbedLink } from '../../../Firebase/firebase_utils';
+import { getPhotoUrl } from '../../../Firebase/firebase_utils';
 const CategoryModal = ({ onClose, data }) => {
     const [title, setTitle] = useState('');
     const [details, setDetails] = useState('');
@@ -115,7 +115,7 @@ const CategoryModal = ({ onClose, data }) => {
 
 
 
-                    {photoUrl ? <img className='my-2 border p-2' src={type == 'g-drive' ? getEmbedLink(photoUrl) : photoUrl} /> : <p>No Image</p>}
+                    {photoUrl ? <img className='my-2 border p-2' src={getPhotoUrl(type,photoUrl)} /> : <p>No Image</p>}
                     {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <button className='bg-dark-3 border' type="submit">{data ? "Update" : "Submit"}</button>
                 </form>
