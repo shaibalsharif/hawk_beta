@@ -68,7 +68,7 @@ export const getCategoryList = async (setter) => {
 
 }
 export const fetchPortFolioData = async (collectionName, documentName, setter) => {
-     console.log(collectionName, documentName, setter);
+     
     const documentRef = doc(db, collectionName, documentName);
     try {
         const documentSnapshot = await getDoc(documentRef);
