@@ -1,19 +1,19 @@
 import React from 'react'
 import car1 from '../../Assets/images/car1.jpg'
+import { getPhotoUrl } from '../../Firebase/firebase_utils'
 
-const Cover = () => {
+const Cover = ({title,sub,coverPhoto,points}) => {
   return (
     <div className='sm:flex items-center sm:bg-dark-2 relative z-0'>
-    <img src={car1} className='object-cover w-full h-screen absolute top-0 left-0 sm:relative -z-10 sm:z-0 sm:w-full ' />
+    <img src={coverPhoto?getPhotoUrl(coverPhoto.type,coverPhoto.url):""}
+    className='object-cover w-full h-screen absolute top-0 left-0 overflow-hidden sm:relative -z-10 sm:z-0 sm:w-full ' />
 
     <div className=' h-screen px-8  sm:w-full  flex items-center bg-black bg-opacity-25 '>
       <div className='md:w-[55%]'>
-        <p className='text-yellow-2 text-[40px] font-bold tracking-widest' >WELCOME HAWK</p>
-        <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px]  '> BEST PHOHTOGRAPHY & VIDEOGRAPHY FOR YOUR NEED</div>
+        <p className='text-yellow-2 text-[40px] font-bold tracking-widest uppercase' >{title}</p>
+        <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px] uppercase '> {sub}</div>
         <div className=' text-xs sm:text-sm font-[500] flex justify-between pt-8 w-[80%] sm:w-[40%]'>
-          <p>CREATIVE TEAM</p>
-          <p>INNOVATION IDEAS</p>
-          <p>BEST SERVICES</p>
+        {points?.map(point=> <p className='uppercase'>{point}</p>)} 
         </div>
       </div>
 

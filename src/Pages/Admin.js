@@ -22,7 +22,7 @@ const Tab = ({ label, isSelected, onClick }) => {
 
 const Admin = () => {
 
-  const [selectedTab, setSelectedTab] = useState(1);
+  const [selectedTab, setSelectedTab] = useState(2);
 
   return (
     <div className='admin-page bg-black min-h-screen w-full'>

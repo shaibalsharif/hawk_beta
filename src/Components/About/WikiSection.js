@@ -19,7 +19,7 @@ const WikiSection = () => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={(swiper) => swiper}
       onSlideChange={() => console.log('slide change')}>
       {TEAM_MEMBERS.map(el => <SwiperSlide> <img src={el.photo} /></SwiperSlide>)}
     </Swiper>
