@@ -68,13 +68,13 @@ export const getCategoryList = async (setter) => {
 
 }
 export const fetchPortFolioData = async (collectionName, documentName, setter) => {
-     
+
     const documentRef = doc(db, collectionName, documentName);
     try {
         const documentSnapshot = await getDoc(documentRef);
         if (documentSnapshot.exists()) {
             const documentData = documentSnapshot.data();
-          console.log("setting",documentData);
+            console.log("setting", documentData);
             setter(documentData);
 
 
@@ -125,6 +125,46 @@ export const getPhotoUrl = (type, url,) => {
                 return url
         }
 
+    }
+}
+
+
+export const getServicePageContent = async (collectionName, documentName, setter) => {
+    const documentRef = doc(db, collectionName, documentName);
+
+    try {
+        const documentSnapshot = await getDoc(documentRef);
+
+        if (documentSnapshot.exists()) {
+            const documentData = documentSnapshot.data();
+          
+            setter(documentData)
+
+
+        } else {
+            console.log("Document does not exist.");
+        }
+    } catch (error) {
+        console.error("Error fetching document:", error);
+    }
+}
+export const getContactPageContent = async (collectionName, documentName, setter) => {
+    const documentRef = doc(db, collectionName, documentName);
+
+    try {
+        const documentSnapshot = await getDoc(documentRef);
+
+        if (documentSnapshot.exists()) {
+            const documentData = documentSnapshot.data();
+          
+            setter(documentData)
+
+
+        } else {
+            console.log("Document does not exist.");
+        }
+    } catch (error) {
+        console.error("Error fetching document:", error);
     }
 }
 

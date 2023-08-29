@@ -12,24 +12,27 @@ const ContactForm = () => {
         <div className='w-full flex flex-col md:grid grid-cols-3 gap-8'>
           <div className='w-full flex flex-col'>
             <label className='capitalize text-xs'>First Name</label>
-            <input className='bg-transparent border-b-[1px] outline-none py-2' type='text' />
+            <input className='bg-transparent border-t-0 border-r-0 border-l-0 border-b-[1px] outline-none py-2 rounded-none' type='text' />
           </div>
           <div className='w-full flex flex-col'>
             <label className='capitalize text-xs'>Last Name</label>
-            <input className='bg-transparent border-b-[1px] outline-none py-2' type='text' />
+            <input className='bg-transparent border-t-0 border-r-0 border-l-0 border-b-[1px]
+rounded-none outline-none py-2' type='text' />
           </div>
 
 
           <div className='w-full flex flex-col'>
             <label className='capitalize text-xs'>Email address</label>
-            <input className='bg-transparent border-b-[1px] outline-none py-2' type='text' />
+            <input className='bg-transparent border-t-0 border-r-0 border-l-0 border-b-[1px]
+rounded-none outline-none py-2' type='text' />
           </div>
 
         </div>
 
 
         <label className='capitalize text-xs'>Messege Content</label>
-        <textarea className='bg-transparent border-b-[1px] outline-none py-2' type='text' />
+        <textarea className='bg-transparent border-t-0 border-r-0 border-l-0 border-b-[1px]
+rounded-none outline-none py-2' type='text' />
 
         <button className='uppercase px-12 tracking-[.3rem] leading-3 mt-20 border w-fit mx-auto py-4'>Submit</button>
       </form>

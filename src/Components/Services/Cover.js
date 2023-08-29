@@ -1,19 +1,19 @@
 import React from 'react'
 import car2 from '../../Assets/images/car2.jpg'
+import { getPhotoUrl } from '../../Firebase/firebase_utils'
 
-const Cover = () => {
+const Cover = ({coverData}) => {
   return (
     <div className='sm:flex items-center sm:bg-dark-2 relative z-0'>
-      <img src={car2} className='object-cover w-full h-screen absolute top-0 left-0 sm:relative -z-10 sm:z-0 sm:w-full ' />
+      <img src={getPhotoUrl(coverData?.image?.type,coverData?.image?.url,)} className='object-cover w-full h-screen absolute top-0 left-0 sm:relative -z-10 sm:z-0 sm:w-full ' />
 
       <div className=' h-screen px-8  sm:w-full  flex items-center bg-black bg-opacity-25 '>
         <div className='md:w-[55%]'>
 
-          <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px]  '>THIS IS HAWK</div>
-          <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px]  '>THAT IS HAWK</div>
-          <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px]  '>ALL ARE HAWK</div>
+          <div className=' text-[40px] sm:text-[55px]  font-[700] leading-[60px]  '>{coverData?.title}</div>
+          
           <div className=' text-xs sm:text-sm font-[500] flex justify-between pt-8 w-[80%] sm:w-[40%]'>
-            <p>THIS IS HAWK THAT IS HAWK ALL ARE HAWK</p>
+            <p>{coverData?.sub}</p>
           </div>
         </div>
 
