@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchPortFolioData, getPhotoUrl } from '../../../Firebase/firebase_utils';
-import { addDoc, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import {  doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../../../Firebase/firebase_config';
 
 

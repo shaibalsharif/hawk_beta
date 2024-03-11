@@ -6,8 +6,7 @@ import NavPage from '../../Pages/NavPage'
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   return (
-    <div className='header-container'>
-
+    <div className='header-container -bg-gradient-to-t from-[#00000038] to-[#000000f1]'>
       <img src={hawk_logo} alt='logo' className='logo-img' />
       <svg
         onClick={(e) => {

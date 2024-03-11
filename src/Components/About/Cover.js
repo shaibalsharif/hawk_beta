@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import car1 from '../../Assets/images/car1.jpg'
 import { getPhotoUrl } from '../../Firebase/firebase_utils'
 
-const Cover = ({title,sub,coverPhoto,points}) => {
+const Cover = ({title,sub,coverPhoto,points,nextRef}) => {
+
+
+  const handleScrollClick = () => {
+    // Scroll to the next section with smooth behavior
+  
+    nextRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div className='sm:flex items-center sm:bg-dark-2 relative z-0'>
+    <div className='sm:flex items-center bg-dark-2 relative z-0'>
     <img src={coverPhoto?getPhotoUrl(coverPhoto.type,coverPhoto.url):""}
     className='object-cover w-full h-screen absolute top-0 left-0 overflow-hidden sm:relative -z-10 sm:z-0 sm:w-full ' />
 
@@ -18,7 +25,8 @@ const Cover = ({title,sub,coverPhoto,points}) => {
       </div>
 
 
-      <div className='absolute bottom-0 left-[50%] sm:left-[75%] transform -translate-x-1/2 sm:-translate-x-2/3 flex flex-col items-center justify-center'>
+      <div className='absolute bottom-0 left-[50%] sm:left-[75%] transform -translate-x-1/2 sm:-translate-x-2/3 flex 
+      flex-col items-center justify-center cursor-pointer ' onClick={handleScrollClick} >
         SCROLL
         <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
