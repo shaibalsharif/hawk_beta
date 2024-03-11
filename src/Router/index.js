@@ -55,7 +55,7 @@ const Router = () => {
                 <Route exact path={'/contact'} element={<Contact />}></Route>
                 <Route exact path={'/services'} element={<Services />}></Route>
                 <Route path="/login" element={user ? <Navigate to="/admin" /> : <Login />} />
-                <Route path="/admin" element={user ? <Admin /> : <Navigate to="/login" />} />
+                <Route path="/admin" element={user ? <Admin logoutHandler={handleLogout} /> : <Navigate to="/login" />} />
 
                 {/*   {routes.map((route, index) => (
                     <Route key={"comp-"+index} exact path={route.path} element={route.element}></Route>
