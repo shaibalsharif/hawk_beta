@@ -20,7 +20,7 @@ const Tab = ({ label, isSelected, onClick }) => {
 
 
 
-const Admin = () => {
+const Admin = ({logoutHandler}) => {
 
   const [selectedTab, setSelectedTab] = useState(2);
 
@@ -34,6 +34,7 @@ const Admin = () => {
           onClick={() => setSelectedTab(index)}
         />)}
       </div>
+      <button className='' onClick={logoutHandler}>Sign Out</button>
  
       <div className='w-full '>
         {selectedTab === 0 && <HomeForm />}
