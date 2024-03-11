@@ -1,8 +1,28 @@
-.about-container{
+.about-container {
     @apply h-full w-screen
 }
 
-.about-title-container{
-@apply  flex items-center justify-center 
+.about-title-container {
+    @apply flex items-center justify-center
 }
 
+
+.section-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .section-container {
+    scroll-behavior: smooth;
+  }
+.slider-item {
+    scroll-snap-type: 'x mandatory';
+    overflow-x: 'scroll';
+    border: '1px solid #ccc';
+    border-radius: '10px';
+
+    @apply flex gap-4 overflow-x-scroll flex-nowrap
+}
+
+.slider-item-img {
+    @apply h-[65vh] w-full max-w-[80vw]
+}

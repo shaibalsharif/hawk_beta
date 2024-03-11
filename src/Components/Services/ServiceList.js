@@ -9,7 +9,7 @@ const ServiceList = ({data}) => {
         <p>{data?.title}</p>
         <p className='text-xs font-normal tracking-widest'>{data?.sub}</p>
       </div>
-      <div className='grid grid-cols-3 px-[20%] gap-10 my-8'>
+      <div className='grid grid-cols-1 md:grid-cols-3 px-[20%] gap-10 my-8'>
       {data?.content?.map(item => {
           return (<div className=' shadow-md'>
             <div className='h-60  bg-slate-400 bg-opacity-10 '>

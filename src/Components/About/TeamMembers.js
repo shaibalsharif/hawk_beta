@@ -15,8 +15,8 @@ const TeamMembers = ({title,detail, teamMembers}) => {
         <div className='text-[25px] tracking-[2px] font-[500] w-[10rem] leading-7 mb-12 uppercase'>{detail}</div>
       </div>
       {teamMembers?.map(el => (
-        <div className='py-2'>
-          <img src={el.photo?getPhotoUrl( el.photo.type, el.photo.url):""} />
+        <div className='py-2 '>
+          <img src={el.photo?getPhotoUrl( el.photo.type, el.photo.url):"" } className='h-[50vh] max-h-[65vh] w-full object-cover' />
           <div className='py-4 flex flex-col gap-2'>
             <p className='uppercase text-[13px] font-[600]'>{el.name}</p>
             <p className='uppercase text-[10px] font-[400] tracking-[5px]'>{el.position}</p>

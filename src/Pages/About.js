@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../Components/Shared/Footer';
 import Cover from '../Components/About/Cover';
 import TeamMembers from '../Components/About/TeamMembers';
@@ -25,7 +25,7 @@ const About = () => {
   const [member_details, set_member_details] = useState('')
 
   const [teamMembers, setTeamMembers] = useState([]);
-
+  const bodySectionRef = useRef(null);
   const getTeamData = async () => {
 
 
@@ -52,9 +52,7 @@ const About = () => {
   };
 
 
-  useEffect(() => {
-    console.log(teamMembers);
-  }, [teamMembers])
+ 
 
   const getCoverData = async () => {
 
@@ -102,13 +100,13 @@ const About = () => {
     getInnerData()
     getTeamData()
   }, [])
-
+ 
   return (
     <div className=''>
-      <Cover title={title} sub={subtitle} points={points} coverPhoto={{ type: coverType, url: coverUrl }} />
+      <Cover nextRef={bodySectionRef} title={title} sub={subtitle} points={points} coverPhoto={{ type: coverType, url: coverUrl }} />
 
 
-      <div className='h-[90vh] min-h-[480px] w-full bg-dark-1 flex flex-col md:flex-row items-start justify-center md:items-center md:justify-between
+      <div ref={bodySectionRef} className='h-[90vh] min-h-[480px] w-full bg-dark-1 flex flex-col md:flex-row items-start justify-center md:items-center md:justify-between
         px-4 md:px-8 text-justify '>
         <h2 className=' text-yellow-2 text-[23px] md:text-[30px] tracking-[2px] font-[500] uppercase md:text-end'>{innerTitle}</h2>
         <p className='text-[14px] mt-8 font-[400] font-sans leading-tight md:w-[65%]'>"{innerDescription}"</p>

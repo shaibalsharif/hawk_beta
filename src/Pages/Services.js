@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Cover from '../Components/Services/Cover'
 import Footer from '../Components/Shared/Footer'
 import OurWork from '../Components/Services/OurWork'
@@ -14,22 +14,24 @@ const Services = () => {
     const [innerPageData, setInnerPageData] = useState(null)
     const [servicesListData, setServicesListData] = useState(null)
     const [clientListData, setClientListData] = useState(null)
-
+    const bodySectionRef = useRef(null);
 
     useEffect(() => {
         getServicePageContent('services', 'cover', setCoverData)
         getServicePageContent('services', 'inner_page', setInnerPageData)
-        getServicePageContent('services','services_list',setServicesListData)
-        getServicePageContent('services','client_list',setClientListData)
+        getServicePageContent('services', 'services_list', setServicesListData)
+        getServicePageContent('services', 'client_list', setClientListData)
     }, [])
- /*      useEffect(() => {
-          console.log(servicesListData);
-      }, [servicesListData]) */
+    /*      useEffect(() => {
+             console.log(servicesListData);
+         }, [servicesListData]) */
 
     return (
         <div>
-            <Cover coverData={coverData} />
-            <OurWork data={innerPageData} />
+            <Cover nextRef={bodySectionRef} coverData={coverData} />
+            <div ref={bodySectionRef}>
+                <OurWork data={innerPageData} />
+            </div>
             <ServiceList data={servicesListData} />
             <ClientHub data={clientListData} />
             <Footer />

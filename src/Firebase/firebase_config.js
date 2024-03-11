@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -11,8 +12,18 @@ const firebaseConfig = {
   appId: "1:568879197774:web:d17ba1e880318c409f9d1f",
   measurementId: "G-2W540HV6GX"
 };
+// const dev_firebaseConfig = {
+//   apiKey: "AIzaSyBptxg07oeKmVm_C1OK2BetBwlXTza5kvM",
+//   authDomain: "hawk-5a18f.firebaseapp.com",
+//   projectId: "hawk-5a18f",
+//   storageBucket: "hawk-5a18f.appspot.com",
+//   messagingSenderId: "568879197774",
+//   appId: "1:568879197774:web:d17ba1e880318c409f9d1f",
+//   measurementId: "G-2W540HV6GX"
+// };
 
 
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig,{experimentalForceLongPolling:true});
 export const db = getFirestore(app);
+export const auth = getAuth(app);

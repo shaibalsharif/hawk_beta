@@ -7,7 +7,7 @@ const OurWork = ({data}) => {
     <div className=' py-20 bg-dark-1 px-[10%]'>
       <p className='uppercase text-5xl text-yellow-2 font-bold text-center'>{data?.title}</p>
       <img src={getPhotoUrl(data?.image?.type,data?.image?.url)} className='w-full px-8 my-16' />
-      <div className='px-8 text-yellow-2 text-2xl font-semibold tracking-widest flex sm:px-[10%] items-start'>
+      <div className='px-8 text-yellow-2 text-2xl font-semibold tracking-widest text-center md:text-start md:flex sm:px-[10%] items-start'>
         <div className='w-full'>
           <div className=''>{data?.sub}</div>
         </div>

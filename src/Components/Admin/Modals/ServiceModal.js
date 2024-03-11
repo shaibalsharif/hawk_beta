@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { getPhotoUrl } from '../../../Firebase/firebase_utils';
 
-const ServiceModal = ({ onClose, onSave, data }) => {
+const ServiceModal = ({ onClose, onSave, data, editMode }) => {
+    console.log("h");
     const [name, setName] = useState(data ? data.name : '');
     const [subTitle, setSubTitle] = useState(data ? data.details : '');
     const [imageType, setImageType] = useState(data ? data.image.type : 'g-drive')
     const [imageUrl, setImageUrl] = useState(data ? data.image.url : "")
 
-    console.log(data);
 
     const handleSave = () => {
         const newData = {
-            name: name,
-            details: subTitle,
-            image: { type: imageType, url: imageUrl, },
-
-           
+            data: {
+                name: name,
+                details: subTitle,
+                image: { type: imageType, url: imageUrl, },
+            },
         };
+        if (editMode) {
+            newData.index = data.index
+        }
 
         onSave(newData);
         onClose();
