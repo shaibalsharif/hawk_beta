@@ -2,22 +2,49 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '../Firebase/firebase_config';
- // Import initialized Firebase app
+import google from '../Assets/images/google.jpg'
+import facebook from '../Assets/images/fb.png'
 
+const GoogleButton = ({ signinHandler}) => {
+    return (<button className='w-full text-xl'
+        onClick={signinHandler}>
+            <span><img src={google} className='h-8 my-auto inline float-left ml-4'/></span>
+        <p className=''>Sign in with Google</p>
+    </button>)
+}
+const FacebookButton = ({ signinHandler}) => {
+    return (<button className='w-full text-xl'
+        onClick={signinHandler}>
+            <span><img src={facebook} className='h-8 my-auto inline float-left ml-4'/></span>
+        <p className=''>Sign in with Facebook</p>
+    </button>)
+}
+const GmailSignIn = ({ }) => {
+    return <div className='flex flex-col w-full'>
+        <label className='text-start'>Email</label>
+        <input type='email' className='w-full  mx-auto px-4 py-2 rounded-md' />
+        <label className='text-start'>Password</label>
+        <input type='password' className='w-full mx-auto px-4 py-2 rounded-md' />
+        <button>Login</button>
+    </div>
+}
 
 const Login = () => {
 
     const [loading, setLoading] = useState(false)
     const [user, setUser] = useState(null)
     const signInWithGoogle = async (e) => {
-
+        e.preventDefault()
+        setLoading(true);
         const provider = new GoogleAuthProvider();
 
         try {
-            signInWithPopup(auth, provider).then(res => {
-                setUser(res);
-                setLoading(false)
-            })
+            signInWithPopup(auth, provider)
+                .then(res => {
+                    console.log(res);
+                    setUser(res);
+                    setLoading(false)
+                })
                 .catch(e => {
                     setLoading(false)
                     console.log(e);
@@ -31,16 +58,17 @@ const Login = () => {
     };
 
     return (
-        <div className='text-center w-3/4 md:w-1/2 bg-white h-[40vh] bg-opacity-90 mx-auto  rounded-md mt-8'>
-
-          {/*   <img src={login_animation} className='h-1/2 mx-auto' /> */}
+        <div className='text-center w-full flex justify-center items-center bg-dark-2 h-screen bg-opacity-90 overflow-hidden'>
 
 
-            {!loading ? <button className='py-1 hover:border-expense-light border-dark-1
-             hover:bg-dark-1 bg-opacity-30 hover:scale-105 active:scale-95 z-10 mx-auto flex 
-              items-center rounded-md border-2 bg-gray-300  font-semibold font-mono mt-6 text-red-500 text-5xl' 
-                onClick={(e) => { setLoading(true); signInWithGoogle() }}>hello
-                <span className='w-2/5 '><img className=' h-10' src={'google'} /></span><p className='w-[150%] '>Sign in with Google</p></button> :
+
+            {!loading ? <div>
+                <h2 className='text-3xl'>Sign In</h2>
+                <GoogleButton    signinHandler={signInWithGoogle} />
+                <FacebookButton  signinHandler={signInWithGoogle} />
+                <GmailSignIn />
+            </div>
+                :
                 <div class="relative flex justify-center items-center mt-12 text-center">
                     <p className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold text-expense-light text-lg loading'>Loading</p>
                     <div class="animate-spin rounded-full h-24 w-24 border-t-2 border-b-2 border-dark-1">  </div>
