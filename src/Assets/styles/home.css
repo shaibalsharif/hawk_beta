@@ -1,39 +1,164 @@
-.home-constainer {
+/* ── Home / Hero ─────────────────────────────────────────── */
+
+.home-container {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: #111517;
 }
 
+/* YouTube iframe stretched to fill */
 .video-back {
     position: absolute;
-
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    width: 100%;
-    z-index: -1;
-    @apply scale-[800%] md:scale-[200%]
+    z-index: 0;
+    pointer-events: none;
+    @apply scale-[800%] md:scale-[200%];
 }
 
-.title {
-    @apply uppercase font-bold text-white w-6 absolute left-2 md:left-8 top-[50%]
-    transform -translate-y-[50%] text-3xl
+/* Gradient vignette — left-heavy so text stays readable */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(17, 21, 23, 0.85) 0%,
+        rgba(17, 21, 23, 0.45) 50%,
+        rgba(17, 21, 23, 0.1) 100%
+    );
+    z-index: 1;
 }
 
-.video-counter {
-    @apply absolute right-2 md:right-8 top-1/2 text-yellow-2 transform -translate-y-1/2 text-xl 
+/* ── Hero text block ── */
+.hero-content {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    overflow: hidden;
+    max-width: 55vw;
+    @apply md:left-12;
 }
 
+.hero-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #fcda02;
+    margin-bottom: 0.9rem;
+}
+
+.hero-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5.5vw, 5rem);
+    text-transform: uppercase;
+    line-height: 1.05;
+    max-width: 14ch;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+/* ── Slide counter (right centre) ── */
+.slide-counter {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    @apply md:right-10;
+}
+
+.counter-current {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fcda02;
+    line-height: 1;
+}
+
+.counter-divider {
+    width: 1px;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.counter-total {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1;
+}
+
+/* ── Category label (bottom-left) ── */
 .video-category {
-    @apply  absolute left-4 md:left-10 bottom-6 text-xs tracking-widest
+    position: absolute;
+    left: 2rem;
+    bottom: 5.5rem;
+    z-index: 3;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    @apply md:left-12 md:bottom-10;
 }
 
+/* ── Nav arrows (bottom-right) ── */
 .video-change-panel {
-    @apply absolute bottom-6 right-6 flex gap-2 
-} 
-.change-button{
-    @apply h-6 w-6   hover:text-yellow-2
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2rem;
+    z-index: 3;
+    display: flex;
+    gap: 0.6rem;
+    @apply md:right-10 md:bottom-10;
 }
 
+.change-button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.change-button:hover {
+    background: #fcda02;
+    border-color: #fcda02;
+    color: #111517;
+}
+
+.change-button svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* ── Progress bar (bottom) ── */
+.slide-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #fcda02;
+    z-index: 3;
+    transform-origin: left;
+}

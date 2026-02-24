@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*, *::before, *::after {
+    cursor: none !important;
+}
 
 html,
 body,
@@ -11,11 +15,69 @@ body,
     height: 100%;
     width: 100%;
     font-family: "Oswald", sans-serif;
-    @apply text-white
+    @apply text-white;
+    scroll-behavior: smooth;
 }
 
-
 ::selection {
-  background: inherit;
-  color: yellow;
+  background: #fcda02;
+  color: #111517;
+}
+
+/* ── Scroll-reveal utility ── */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.76, 0, 0.24, 1),
+                transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.reveal-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Image clip-path reveal ── */
+.img-reveal-wrap {
+    overflow: hidden;
+}
+.img-reveal {
+    clip-path: inset(100% 0 0 0);
+    transform: scale(1.08);
+    transition: clip-path 1s cubic-bezier(0.76, 0, 0.24, 1),
+                transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.img-reveal.in-view {
+    clip-path: inset(0% 0 0 0);
+    transform: scale(1);
+}
+
+/* ── Xen-style underline button ── */
+.xen-btn {
+    position: relative;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    padding: 0.75rem 2rem;
+    border: 1px solid currentColor;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+.xen-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #fcda02;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: -1;
+}
+.xen-btn:hover {
+    color: #111517;
+    border-color: #fcda02;
+}
+.xen-btn:hover::after {
+    transform: scaleX(1);
 }

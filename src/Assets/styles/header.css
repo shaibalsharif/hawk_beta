@@ -1,32 +1,102 @@
+/* ── Header ─────────────────────────────────────────────── */
+
 .header-container {
-    @apply w-full z-10 h-20 flex px-4 py-4 justify-between items-center fixed top-0 left-0
+    @apply w-full z-10 h-20 flex px-4 py-4 justify-between items-center fixed top-0 left-0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .logo-img {
-    @apply h-full
+    @apply h-full;
 }
 
-.menu-icon {
-    @apply text-3xl
+/* ── Hamburger icon ── */
+.nav-open {
+    @apply w-12 h-12;
+    transition: opacity 0.2s ease;
+}
+.nav-open:hover {
+    opacity: 0.65;
 }
 
+/* ── Full-screen nav overlay ── */
 .nav-container {
-    @apply z-20 absolute h-screen w-full top-0 left-0 overflow-hidden bg-dark-1
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: #111517;
+    overflow: hidden;
 }
 
 .nav-header {
-    @apply h-20 flex px-4 py-4 justify-between w-full items-center absolute top-0 left-0
+    @apply h-20 flex px-4 py-4 justify-between w-full items-center absolute top-0 left-0;
+    z-index: 2;
 }
 
-.nav-close,
-.nav-open {
-    @apply w-16 h-16 
+.nav-close {
+    @apply w-12 h-12;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+.nav-close:hover {
+    transform: rotate(90deg);
+    opacity: 0.6;
 }
 
-.nav-link-container { 
-    @apply h-screen w-full flex flex-col items-center justify-center 
+/* ── Nav links ── */
+.nav-link-container {
+    @apply h-screen w-full flex flex-col items-start justify-center;
+    padding-left: clamp(2rem, 8vw, 6rem);
+    gap: 0.15rem;
 }
 
 .nav-link {
-    @apply uppercase font-bold text-[1.5rem] hover:cursor-pointer hover:scale-125 hover:text-yellow-2
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    line-height: 1.1;
+    padding: 0.15em 0;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Yellow underline that sweeps in from left */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fcda02;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-link:hover {
+    color: #fcda02;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* ── Nav image panel (desktop) ── */
+.nav-image-panel {
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    overflow: hidden;
+}
+
+.nav-image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 8s ease;
 }
